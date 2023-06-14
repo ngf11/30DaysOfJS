@@ -1,0 +1,1266 @@
+// 30DaysOfJavaScript 
+// Day 02
+
+const num = Math.ceil(Math.random () * 11) // creates random number between 0 and 10
+console.log(num)
+
+let challenge = '30 Days Of JavaScript';
+let chall = '30 Days of';
+let enge = 'JavaScript'
+let py = 'Python';
+let sentence = 'You cannot end a sentence with because because because is a conjunction';
+console.log(challenge);
+console.log(challenge.length);
+console.log(challenge.toLocaleUpperCase());
+console.log(challenge.toLocaleLowerCase());
+console.log(challenge.substr(3,5));
+console.log(challenge.substr(3));
+console.log(challenge.includes('Script'));
+console.log(challenge.split(' '))
+console.log('Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon'.split( " "));
+console.log(challenge.replace('JavaScript', 'Python'));
+console.log(challenge.charAt(15));
+console.log(challenge.charCodeAt(11)); 
+console.log(challenge.indexOf('30 Days Of JavaScript'));
+console.log(sentence.indexOf('because'));
+console.log(challenge.indexOf('J'));
+console.log(sentence.lastIndexOf('because'));
+console.log(sentence.search('because'));
+console.log(challenge.trim());
+console.log(challenge.startsWith('30'));
+console.log(challenge.endsWith('t'));
+console.log(challenge.match('a'));
+console.log(chall.concat(enge));
+console.log(challenge.repeat(2));
+
+console.log('\'There is no exercise better for the heart than reaching down and lifting people up.\' by John Holmes teaches us to help one another,');
+
+console.log('\"Love is not patronizing and charity isn\'t about pity, it is about love\. Charity and love are the same -- with charity you give love, so don\'t just give money but reach out your hand instead.\"');
+console.log(typeof('10') === typeof('10'))
+console.log(Math.ceil( (parseFloat('9.8'))));
+console.log(py.includes('on'));
+console.log(enge.includes('on'));
+let string = 'I hope this course is not full of jargon';
+    console.log(string.match('jargon'));
+    console.log(string.includes('jargon'));
+console.log(Math.floor(Math.random()*11)); // random number to 10
+console.log(Math.floor(Math.random()*51)); // random number to 50
+console.log(Math.floor(Math.random()*256)); 
+
+// generate random number starting with a minum number 
+//Math.floor(Math.random() * (max - min + 1)) + min;
+console.log(Math.floor(Math.random() * (100 - 50) + 50)); 
+
+console.log(Math.floor(Math.random()*enge.length)); // Gives you a random character from a string
+console.log('1 1 1 1 1 \n2 1 2 4 8\n3 1 3 9 27\n4 1 4 16 64\n5 1 5 25 125');
+let str = 'You cannot end a sentence with because because because is a conjunction'
+console.log(str.indexOf('because'));
+console.log(str.substr(31,24));
+let love = 'Love is the best thing in this world. Some found their love and some are still looking for their love.';
+console.log(love.match(/love/gi));
+const sentence2 = '%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching';
+console.log(sentence2.replace(/[&@%$#]/g, ''))
+let income = 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.';
+console.log(income.match(/\d+(\.\d+)?/g)
+.reduce((sum, number) => sum + parseFloat(number), 0)
+); // this expresion using RegEX extracts a number froma string and adds them giving you the result 
+
+
+// Day 03
+
+// let number = prompt('Enter number', 'number goes here')
+// console.log(number)
+//The confirm() method displays a dialog box with a specified message, along with an OK and a Cancel button. A confirm box is often used to ask permission from a user to execute something. Window confirm() takes a string as an argument. Clicking the OK yields true value, whereas clicking the Cancel button yields false value.
+//const agree = confirm('Are you sure you like to delete? ')
+//console.log(agree) result will be true or false based on what you click on the dialog box
+let firstName = "Nico";
+let lastName = "Fuentes";
+let country = "U.S.A";
+let city = "Kearny";
+let age = 33;
+let isMarried = false;
+console.log(
+  typeof firstName,
+  typeof lastName,
+  typeof country,
+  typeof city,
+  typeof age,
+  typeof isMarried
+);
+console.log(typeof "10" == 10);
+console.log(parseInt("9.8") === 10);
+// true
+console.log("100" === "100");
+let numbers = 1 > 0;
+let doISuck = true;
+console.log(numbers, doISuck);
+// false
+let str = " limp Bizkit" > "Led Zeppelin";
+let doIHaveABigWon = false;
+let check = -100 === 100;
+
+let py = "python";
+let jar = "jargon";
+console.log(py.length === jar.length);
+
+let sanke = "python";
+let creature = "dragon";
+console.log(sanke.match("on"));
+console.log(creature.includes("on"));
+
+const today = new Date();
+console.log(today.getFullYear());
+console.log(today.getMonth() + 1);
+console.log(`${today.getDay()}/${today.getMonth() + 1}/${today.getFullYear()}`);
+console.log(today.getHours());
+console.log(today.getMinutes());
+console.log(today.getTime());
+
+//  let base = prompt('Enter the base of your triangle');
+//  let hight = prompt('Enter the hight of your triangle');
+//  let area = base * hight / 2 ;
+//  let respond = alert(`The area of triangle is ${area}`);
+
+// let length = prompt('enter the the length of your rectangle');
+// let width = prompt('enter the width of your rectangle');
+// let awnser = alert(`The area of your rectangle is ${length * width} and the permimeter is ${2*(length) + 2*(width)}`);
+
+// let sideA = prompt("Enter the length of side A of your triangle");
+// let sideB = prompt("Enter the length of side B of your triangle");
+// let sideC = prompt("Enter the length of side C of your triangle");
+// let awnser = parseInt(sideA) + parseInt(sideB) + parseInt(sideC);
+// let respond = alert(`The paramiter of your triangel is ${awnser}`);
+
+//Get radius using prompt and calculate the area of a circle (area = pi x r x r) and circumference of a circle(c = 2 x pi x r) where pi = 3.14.
+// const pi = 3.14;
+// const getRadius = prompt(
+//   "What is the radius of your circle?",
+//   "Enter the raduis messurments here"
+// );
+// const area = pi * getRadius * getRadius;
+// const circumference = 2 * pi * getRadius;
+// let awnser = alert(
+//   `The area of your circle is ${area} and the circumference of your circle is ${circumference}`
+// );
+
+// Enter hours: 40
+// Enter rate per hour: 28
+// Your weekly earning is 1120
+// let hoursWorked = prompt("How many hours have you worked today?");
+// const hourlyRate = 28;
+// const earning = hourlyRate * hoursWorked;
+// let yourpay = alert(`Your weekly earning is ${earning}`);
+
+//If the length of your name is greater than 7 say, your name is long else say your name is short.
+
+// let name = prompt("What is your name?");
+
+// function checkNamelength(name) {
+//   if (name.length >= 7) {
+//     alert("Too long!!!");
+//   } else if (name.match(/nico/gi)) {
+//     alert("Your name is beautiful");
+//   } else {
+//     alert("Your name is too short");
+//   }
+// }
+// checkNamelength(name);
+
+// const myFirstName = prompt("what is your First Name?");
+// const myLastName = prompt("What is your Last Name?");
+
+// function myNamesChecked(myFirstName, myLastName) {
+//   if (myFirstName.length > myLastName.length) {
+//     alert(
+//       `Your first name, ${myFirstName} is longer than your family name, ${myLastName}`
+//     );
+//   } else if (myFirstName.length < myLastName.length) {
+//     alert(
+//       `Your last name, ${myLastName} is longer than your family name, ${myFirstName}`
+//     );
+//   } else {
+//     alert("Your first name and last name are the same lengths");
+//   }
+// }
+// myNamesChecked(myFirstName, myLastName);
+// let yourAge = 250;
+// let myAge = 33;
+// let calAge = yourAge - myAge;
+// let message = alert(`I am ${calAge} years older then you`);
+
+//Using prompt get the year the user was born and if the user is 18 or above allow the user to drive if not tell the user to wait a certain amount of years.
+
+// Enter birth year: 1995
+// You are 25. You are old enough to drive
+
+// Enter birth year: 2005
+// You are 15. You will be allowed to drive after 3 years.
+// const now = new Date();
+// const years = now.getFullYear();
+// let yourBirthYear = prompt("What year wher you born", " Enter year here");
+// const yearsLeft = 18 - (years - yourBirthYear);
+// console.log(yearsLeft);
+// function canYouDrive(years, yourBirthYear) {
+//   if (years - yourBirthYear >= 18) {
+//     alert(`You are ${years - yourBirthYear} years old. You can drive.`);
+//   } else {
+//     alert(
+//       `You are ${
+//         years - yourBirthYear
+//       } years old. You can\'t drive yet. You will be allowed to drive after ${yearsLeft} years. `
+//     );
+//   }
+// }
+// canYouDrive(years, yourBirthYear);
+
+//YYY-MM-DD HH:mm eg. 20120-01-02 07:05
+// const now = new Date();
+// const years = now.getFullYear();
+// const month = now.getMonth();
+// const day = now.getDate();
+// const hour = now.getHours();
+// const minutes = now.getMinutes();
+
+// console.log(`${month + 1}-${day}-${years} ${hour}:${minutes}`);
+
+
+//day 04
+
+// const random = Math.floor(Math.random() * 11);
+// let userImput = prompt("Enter a nunmuber form 0 to 10", "Enter number here");
+
+// userImput > random ? console.log("you won") : console.log("you lost");
+
+// if (random > userImput) {
+//   console.log(
+//     ` Computer number was ${random}, yours is ${userImput}. You lost`
+//   );
+// } else if (userImput > random) {
+//   console.log(
+//     `Your number was ${userImput}, comuter number was ${random}. Yo won!`
+//   );
+// }
+
+// let userImput = prompt("enter a number", "enter number here");
+
+// if (userImput % 2 === 0) {
+//   console.log("That number is even");
+// } else {
+//   console.log("that number is odd");
+// }
+
+// const enterGrade = prompt(
+//   "What is your average grade in numeres?",
+//   " enter number here 0-10"
+// );
+// switch (true) {
+//   case enterGrade >= 90:
+//     console.log("your gade is an A");
+//     break;
+//   case enterGrade >= 80:
+//     console.log("your gade is an B");
+//     break;
+//   case enterGrade >= 70:
+//     console.log("your gade is an C");
+//     break;
+//   case enterGrade >= 60:
+//     console.log("your gade is an D");
+//     break;
+//   default:
+//     console.log("F!!! no bueno");
+// }
+
+// Check if the season is Autumn, Winter, Spring or Summer. If the user input is :
+// September, October or November, the season is Autumn.
+// December, January or February, the season is Winter.
+// March, April or May, the season is Spring
+// June, July or August, the season is Summer
+
+// let seasons = prompt("What months are we on?");
+
+// function checkSeason(seasons) {
+//   switch (seasons) {
+//     case "September":
+//     case "October":
+//     case "November":
+//       console.log("Autumn");
+//       break;
+//     case "December":
+//     case "January":
+//     case "February":
+//       console.log("Winter");
+//       break;
+//     case "March":
+//     case "April":
+//     case "May":
+//       console.log("Spring");
+//       break;
+//     case "June":
+//     case "July":
+//     case "August":
+//       console.log("Summer");
+//       break;
+//     default:
+//       console.log("Invalid Month");
+//   }
+// }
+
+// checkSeason(seasons);
+
+// Check if a day is weekend day or a working day. Your script will take day as an input.
+//     What is the day  today? Saturday
+//     Saturday is a weekend.
+
+//     What is the day today? saturDaY
+//     Saturday is a weekend.
+
+//     What is the day today? Friday
+//     Friday is a working day.
+
+//     What is the day today? FrIDAy
+//     Friday is a working day.
+
+// let days = prompt("What day of the week is it?");
+// let weekends = ["Saturday", "Sunday"];
+// let result = weekends.includes(days)
+//   ? `${days} is the weekend`
+//   : `${days} is a working day`;
+// console.log(result);
+
+//day 05
+
+const arrempty = [];
+const numbers = [3, 6, 9, 11, 5];
+console.log(numbers.length);
+console.log(numbers[0]);
+console.log(numbers[2]);
+console.log(numbers[4]);
+let firstNumber = numbers[0];
+console.log(firstNumber); // this way works of extracting items from the Array
+
+const mixedDataTypes = [
+  "33",
+  "Nico",
+  11,
+  "how are you?",
+  {
+    coutry: "Uruguay",
+    city: "Montevideo",
+  },
+  { skills: ["HTML", "CSS", "JS"] },
+];
+
+console.log(mixedDataTypes);
+console.log(mixedDataTypes.length);
+
+const itCompanies = [
+  "Facebook",
+  "Google",
+  "Microsoft",
+  "Apple",
+  "IBM",
+  "Oracle",
+  "Amazon",
+];
+console.log(itCompanies);
+console.log(itCompanies.length);
+
+//Print the first company, middle and last company
+let firstCorp = itCompanies[0];
+let middleCorp = itCompanies[3];
+let lastindex = itCompanies.length - 1;
+let lastCorp = itCompanies[lastindex];
+
+console.log(firstCorp, middleCorp, lastCorp);
+console.log(itCompanies.toString().toUpperCase());
+console.log(itCompanies.toString(), "are big IT companies");
+
+//Check if a certain company exists in the itCompanies array. If it exist return the company else return a company is not found
+
+console.log(itCompanies.indexOf("Taco Bell"));
+console.log(itCompanies.indexOf("Google"));
+console.log(itCompanies.sort());
+console.log(itCompanies.reverse());
+
+//Slice out the first 3 companies from the array
+// Slice out the last 3 companies from the array
+// Slice out the middle IT company or companies from the array
+// Remove the first IT company from the array
+// Remove the middle IT company or companies from the array
+// Remove the last IT company from the array
+// Remove all IT companies
+console.log(itCompanies.slice(0, 4));
+console.log(itCompanies.slice(3, 7));
+console.log(itCompanies.slice(2, 5));
+console.log((itCompanies.length = 0));
+const countries = [
+  "Albania",
+  "Bolivia",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Finland",
+  "Germany",
+  "Hungary",
+  "Ireland",
+  "Japan",
+  "Kenya",
+];
+
+const webTechs = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Redux",
+  "Node",
+  "MongoDB",
+];
+
+let text =
+  "I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.";
+text = text.split(" ");
+console.log(text);
+console.log(text.length);
+
+const shoppingCart = ["Milk", "Coffee", "Tea", "Honey"];
+shoppingCart.unshift("Meat");
+shoppingCart.push("Sugar");
+shoppingCart.pop();
+shoppingCart.pop();
+shoppingCart.push("Green Tea");
+console.log(shoppingCart);
+
+console.log(countries.includes("Ethiopia"));
+console.log(webTechs.includes("Sass"));
+webTechs.push("Saas");
+console.log(webTechs);
+
+const frontEnd = ["HTML", "CSS", "JS", "React", "Redux"];
+const backEnd = ["Node", "Express", "MongoDB"];
+const fullStack = frontEnd.concat(backEnd);
+
+console.log(fullStack);
+
+let ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+ages = ages.sort();
+console.log(ages);
+
+let minAges = Math.min(...ages);
+let maxAges = Math.max(...ages);
+console.log(minAges, maxAges);
+
+let ageRange = maxAges - minAges;
+console.log(ageRange);
+
+let agesSum = ages.reduce((a, b) => a + b, 0);
+console.log(agesSum);
+console.log(ages.length);
+let agesAverage = agesSum / 10;
+console.log(Math.ceil(agesAverage));
+
+//oding objects
+const user = {
+  name: "John",
+  surname: "Smith",
+};
+let pelutodo = {};
+
+console.table(user);
+user.name = "Peter";
+delete user.name;
+
+function isEmpty(obj) {
+  for (let key in obj) {
+    return false;
+  }
+  return true;
+}
+isEmpty();
+console.log(isEmpty(user));
+console.log(isEmpty(pelutodo));
+
+// this fucntion returns true or false if the object is empty
+// using a for In loop
+
+let salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 130,
+};
+
+let sum = 0;
+for (let key in salaries) {
+  sum += salaries[key];
+}
+
+console.log(sum);
+
+function multiplyNumeric(obj) {
+  for (let key in obj) {
+    if (typeof obj[key] == "number") {
+      obj[key] *= 2;
+    }
+  }
+}
+
+Day 06
+/*
+// for (let i = 1; i <= 100; i++) {
+//   if (i % 2 === 0 && i % 3 === 0) {
+//     console.log("FizzBuzz");
+//   } else if (i % 2 === 0) {
+//     console.log("Fizz");
+//   } else if (i % 3 === 0) {
+//     console.log("Buzz");
+//   } else {
+//     console.log(i);
+//   }
+// }
+
+// for (let i = 1; i <= 10; i++) {
+//   console.log(i);
+// }
+
+// let i = 0;
+// while (i <= 10) {
+//   console.log(i);
+//   i++;
+// // }
+// let i = 0;
+// do {
+//   console.log(i);
+//   i++;
+// } while (i <= 10);
+
+// for (let i = 10; i >= 0; i--) {
+//   console.log(i);
+// }
+
+// let i = 10;
+
+// while (i >= 0) {
+//   console.log(i);
+//   i--;
+// }
+// let i = 10;
+// do {
+//   console.log(i);
+//   i--;
+// } while (i >= 0);
+
+// for (let i = 1; i <= 5; i++) {
+//   console.log("#".repeat(i));
+// }
+
+// for (let i = 1; i <= 7; i++) {
+//   let output = "";
+//   for (let j = 1; j <= i; j++) {
+//     output += "#";
+//   }
+//   console.log(output);
+// }
+
+// for (let i = 1; i <= 10; i++) {
+//   let output = "";
+//   for (let j = 1; j <= i; j++) {
+//     output += "#";
+//   }
+//   console.log(output);
+// }
+
+// for (let i = 0; i <= 10; i++) {
+//   console.log(`${i} x ${i}= ${i * i}`);
+// }
+// let output = "i\ti^2\ti^3\n";
+// for (let i = 0; i <= 10; i++) {
+//   output += `${i}\t${i ** 2}\t${i ** 3}\n`;
+// }
+
+// console.log(output);
+
+// for (let i = 0; i <= 100; i = i + 2) {
+//   console.log(i);
+// }
+
+// for (let i = 1; i <= 100; i = i + 2) {
+//   console.log(i);
+// }
+
+// // This is the sum of the number of the loop
+// let sum = 0;
+// for (let i = 0; i <= 100; i++) {
+//   sum += i;
+// }
+// console.log(sum);
+
+// let sum = 0;
+// let result = [];
+// for (let i = 0; i <= 100; i = i + 2) {
+//   result.push((sum += i));
+//   for (let j = 1; j <= i; j = j + 2) {
+//     result.push((sum += j));
+//   }
+// }
+// console.log(result);
+
+// let sumEven = 0;
+// let sumOdd = 0;
+
+// for (let i = 0; i <= 100; i++) {
+//   if (i % 2 === 0) {
+//     sumEven += i;
+//   } else {
+//     sumOdd += i;
+//   }
+// }
+// console.log(sumEven, sumOdd);
+
+let random = "";
+const regEx = /[a-zA-Z0-9]/;
+
+for (let i = 1; i <= 5; i++) {
+  let randomChar = String.fromCharCode(Math.floor(Math.random() * 62) + 48);
+  while (!regEx.test(randomChar)) {
+    randomChar = String.fromCharCode(Math.floor(Math.random() * 62) + 48);
+  }
+  random += randomChar;
+}
+
+console.log(random);
+
+let random = "";: Initialize an empty string to store the random characters.
+const regEx = /[a-zA-Z0-9]/;: Create a regular expression that matches any character that is a letter (lowercase or uppercase) or a digit (0-9).
+for (let i = 1; i <= 5; i++) {: Loop 5 times to generate 5 random characters.
+let randomChar = String.fromCharCode(Math.floor(Math.random() * 62) + 48);: Generate a random character using the Math.random() method, which returns a random number between 0 and 1, and the String.fromCharCode() method, which converts a Unicode value into a character. The expression Math.floor(Math.random() * 62) + 48 generates a random integer between 48 and 122 (inclusive), which corresponds to the Unicode values of the characters 0-9, A-Z, and a-z.
+while (!regEx.test(randomChar)) {: If the random character is not a letter or a digit, generate a new random character until one that matches the regular expression is found.
+random += randomChar;: Add the random character to the random string.
+}: End of the for loop.
+console.log(random);: Output the random string of 5 characters.
+So, the overall effect of the code is to generate a random string of 5 characters that includes letters (both uppercase and lowercase) and digits.
+*/
+/*
+const regEx = /[a-zA-Z0-9]/;
+const minLength = 5; // minimum length of the string
+const maxLength = 20; // maximum length of the string
+
+let random = "";
+const length =
+  Math.floor(Math.random() * (maxLength - minLength + 1)) + minLength; // generate random length between minLength and maxLength
+for (let i = 1; i <= length; i++) {
+  let randomChar = String.fromCharCode(Math.floor(Math.random() * 62) + 48);
+  random += randomChar;
+}
+
+console.log(random);
+console.log(random.length);
+this script will generate random characters of any a ceriting lengrths 
+
+for (let i = 1; i <= 5; i++) {
+  let output = "";
+  for (let j = 1; j <= i; j++) {
+    output += "#";
+  }
+  console.log(output);
+}
+
+for (let i = 5; i >= 1; i--) {
+  let output = "";
+  for (let j = 1; j <= i; j++) {
+    output += "#";
+  }
+  console.log(output);
+}
+
+let count = 0;
+
+do {
+  console.log(count);
+  count++;
+} while (count < 10);
+
+let i = 10;
+
+while (i >= 0) {
+  console.log(i);
+  i--;
+}
+
+
+const nums = [1, 2, 3, 4, 5];
+
+for (let i = 0; i < nums.length; i++) {
+  console.log(nums[i]);
+}
+
+for (const num of nums) {
+  console.log(num);
+}
+
+
+const nums = [1, 2, 3, 4, 5];
+
+// regular loop
+for (let i = 0; i < nums.length; i++) {
+  console.log(nums[i]);
+}
+
+// forEach
+// structure of forEach arr.foreach(callBackFunction)
+
+function callback(item, index, arr) {
+  console.log(item, index);
+}
+nums.forEach(callback);
+
+// Make forEach cleaner
+
+nums.forEach((item, i) => {
+  console.log(item, i);
+});
+
+const person = {
+  fristName: "Nico",
+  lastName: "Fuentes",
+  age: 34,
+  country: " U.S.A",
+  skills: ["HTML", "CSS", "JavaScript"],
+};
+
+for (const keys in person) {
+  console.log(keys, person[keys]);
+}
+*/
+const countries = [
+  "Albania",
+  "Bolivia",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Finland",
+  "Germany",
+  "Hungary",
+  "Ireland",
+  "Japan",
+  "Kenya",
+];
+
+const webTechs = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Redux",
+  "Node",
+  "MongoDB",
+];
+
+const mernStack = ["MongoDB", "Express", "React", "Node"];
+const upperCountries = [];
+const countriesLegth = [];
+const arr = [];
+for (const country of countries) {
+  upperCountries.push(country.toUpperCase());
+  countriesLegth.push(country.length);
+  arr.push(country, country.slice(0, 3).toUpperCase(), country.length);
+}
+console.log(upperCountries);
+console.log(countriesLegth);
+console.log(arr);
+
+// Day 7
+
+/*
+function prtintFullNmae() {
+  let firstNmae = "Nico";
+  let space = " ";
+  let lastNmae = "fuentes";
+  let fullName = firstNmae + space + lastNmae;
+  return fullName;
+}
+console.log(prtintFullNmae());
+function sum(a, b) {
+    return a + b;
+}
+console.log(sum(1, 2));
+
+function areaOfARectangle(length, width) {
+    return length * width;
+}
+console.log(areaOfARectangle(5, 10));
+
+function perimeterOfRectangle(length, width) {
+    return 2 * (length + width);
+}
+console.log(perimeterOfRectangle(2, 5));
+
+function volumeOfRectPrism(length, width, hight) {
+  return length * width * hight;
+}
+
+console.log(volumeOfRectPrism(2, 2, 2));
+
+function areaOfCircle(r) {
+  return Math.PI * r * r;
+}
+console.log(areaOfCircle(3));
+
+function circumOfCircle(r) {
+  return 2 * (Math.PI * r);
+}
+console.log(circumOfCircle(2));
+
+function desteny(mass, volume) {
+  const dest = mass / volume;
+  return dest;
+}
+
+function weight(mass, gravity = 9.81) {
+  const substance = mass * gravity;
+  return substance;
+}
+console.log(weight(182));
+
+function convertCelsiusToFahrenheit(celsius) {
+  let fahrenheit = celsius * 1.8 + 32;
+  return `${celsius}C is ${fahrenheit}F`;
+}
+
+console.log(convertCelsiusToFahrenheit(30));
+
+function bodyMassIndex(weight, height) {
+  const bmi = weight / (height * height);
+  if (bmi < 18.5) {
+    return ` Your BMI is ${bmi} you are Underweight`;
+  } else if (bmi < 24.9) {
+    return ` Your BMI is ${bmi} you are Normal weight`;
+  } else if (bmi < 29.9) {
+    return ` Your BMI is ${bmi} you are Overweight `;
+  } else if (bmi >= 30) {
+    return ` Your BMI is ${bmi} you are  obese`;
+  }
+}
+console.log(bodyMassIndex(82, 1.7));
+
+Write a function called checkSeason, it takes a month parameter and returns the season:Autumn, Winter, Spring or Summer.
+function checkSeason(month) {
+  let now = new Date().getMonth() + 1;
+  
+  if (now == 12 || now == 1 || now == 2) {
+    return "winter";
+  } else if (now == 3 || now == 4 || now == 5) {
+    return "Spring";
+  } else {
+    return "Summer or Fall";
+  }
+}
+console.log(checkSeason());
+function findMax(a, b, c) {
+  return Math.max(a, b, c);
+}
+console.log(findMax(0, -5, -10));
+
+function findMax(a, b, c) {
+  let max = a;
+  if (b > max) {
+    max = b;
+    if (c > max) {
+      max = c;
+    }
+  }
+  return max;
+}
+
+console.log(findMax(10, 30, 20));
+
+Linear equation is calculated as follows: ax + by + c = 0. Write a function which calculates value of a linear equation, solveLinEquation.
+function solveLinEquation(a, b, c, x) {
+  return (-c - a * x) / b;
+}
+Quadratic equation is calculated as follows: ax2 + bx + c = 0. Write a function which calculates value or values of a quadratic equation, solveQuadEquation.
+
+
+Declare a function name printArray. It takes array as a parameter and it prints out each value of the array.
+
+ format: 08/01/2020 04:08 using the Date object.
+ 
+ function showDateTime() {
+   let now = new Date();
+   let month = now.getMonth() + 1;
+   let day = now.getDay();
+   let year = now.getFullYear();
+   let hour = now.getHours();
+   let mins = now.getMinutes();
+   month = month < 10 ? "0" + month : month;
+   day = day < 10 ? "0" + day : day;
+   hour = hour < 10 ? "0" + hour : hour && hour > 10 ? hour - 12 : hour;
+   mins = mins < 10 ? "0" + mins : mins;
+   return `${month}/${day}/${year} ${hour}:${mins}`;
+  }
+  console.log(showDateTime());
+  
+  function swapValues(x, y) {
+    let temp = x;
+    x = y;
+    y = temp;
+    return { x: x, y: y };
+  }
+  console.log(swapValues(10, 20));
+  function reverseArray(arr) {
+    let newArr = [];
+    
+    for (let i = arr.length - 1; i >= 0; i--) {
+      newArr.push(arr[i]);
+    }
+    return newArr;
+  }
+  console.log(reverseArray([1, 2, 3, 4, 5]));
+  //[5, 4, 3, 2, 1]
+  console.log(reverseArray(["A", "B", "C"]));
+  //['C', 'B', 'A']
+  
+  const capitalizeArray = (arr) => {
+    const newArr = [];
+    for (const e of arr) {
+      newArr.push(e.toUpperCase());
+    }
+    return newArr;
+  };
+  const nico = ["nico", "nico", "nico"];
+  console.log(capitalizeArray(nico));
+  
+  const addAll = (...num) => {
+    let sum = 0;
+    for (let i = 0; i < num.length; i++) {
+      sum += num[i];
+    }
+    return sum;
+  };
+  console.log(addAll(10, 1, 1, 1));
+  function sumAll(...arr) {
+    let sum = 0;
+    for (const element of arr) {
+      sum += element;
+    }
+    return sum;
+  }
+  console.log(sumAll(1, 1, 1, 1));
+  */
+
+//
+
+// function sumAllOdds(numbers) {
+//   let sum = 0;
+//   for (let i = 0; i < numbers.length; i++) {
+//     if (numbers[i] % 2 !== 0) {
+//       sum += numbers[i];
+//     }
+//   }
+//   return sum;
+// }
+
+// function sumAllOdds(numbers) {
+//   let sum = 0;
+//   numbers.forEach((number) => {
+//     if (number % 2 !== 0) {
+//       sum += number;
+//     }
+//   });
+//   return sum;
+// }
+// console.log(sumAllOdds([1, 1, 2, 3, 4]));
+/*
+Declare a function name evensAndOdds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
+function evensAndOdds(numbers) {
+  let evens = 0;
+  let odds = 0;
+  for (let i = 0; i <= numbers; i++) {
+    if (i % 2 == 0) {
+      evens++;
+    } else {
+      odds++;
+    }
+  }
+  return `${evens} ${odds}`;
+}
+
+console.log(evensAndOdds(100));
+*/
+
+// day 08
+/*
+const dog = {};
+{
+  dog.name = "milo";
+  dog.legs = 4;
+  dog.color = "brown and white";
+  dog.bark = function () {
+    console.log("woof woof");
+  };
+}
+
+console.log(dog);
+
+const users = {
+  Alex: {
+    email: "alex@alex.com",
+    skills: ["HTML", "CSS", "JavaScript"],
+    age: 20,
+    isLoggedIn: false,
+    points: 30,
+  },
+  Asab: {
+    email: "asab@asab.com",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Redux",
+      "MongoDB",
+      "Express",
+      "React",
+      "Node",
+    ],
+    age: 25,
+    isLoggedIn: false,
+    points: 50,
+  },
+  Brook: {
+    email: "daniel@daniel.com",
+    skills: ["HTML", "CSS", "JavaScript", "React", "Redux"],
+    age: 30,
+    isLoggedIn: true,
+    points: 50,
+  },
+  Daniel: {
+    email: "daniel@alex.com",
+    skills: ["HTML", "CSS", "JavaScript", "Python"],
+    age: 20,
+    isLoggedIn: false,
+    points: 40,
+  },
+  John: {
+    email: "john@john.com",
+    skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "Node.js"],
+    age: 20,
+    isLoggedIn: true,
+    points: 50,
+  },
+  Thomas: {
+    email: "thomas@thomas.com",
+    skills: ["HTML", "CSS", "JavaScript", "React"],
+    age: 20,
+    isLoggedIn: false,
+    points: 40,
+  },
+  Paul: {
+    email: "paul@paul.com",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "MongoDB",
+      "Express",
+      "React",
+      "Node",
+    ],
+    age: 20,
+    isLoggedIn: false,
+    points: 40,
+  },
+  mostSkilledPerson: function () {
+    let mostSkills = 0;
+    let mostSkilledPerson = null;
+
+    for (const user in this) {
+      if (this.hasOwnProperty(user) && user !== "mostSkilledPerson") {
+        const skillsCount = this[user].skills.length;
+        if (skillsCount > mostSkills) {
+          mostSkills = skillsCount;
+          mostSkilledPerson = user;
+        }
+      }
+    }
+
+    return mostSkilledPerson;
+  },
+};
+
+console.log(users.mostSkilledPerson());
+
+const users = {
+  Alex: {
+    email: "alex@alex.com",
+    skills: ["HTML", "CSS", "JavaScript"],
+    age: 20,
+    isLoggedIn: false,
+    points: 30,
+  },
+  Asab: {
+    email: "asab@asab.com",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Redux",
+      "MongoDB",
+      "Express",
+      "React",
+      "Node",
+    ],
+    age: 25,
+    isLoggedIn: false,
+    points: 50,
+  },
+  Brook: {
+    email: "daniel@daniel.com",
+    skills: ["HTML", "CSS", "JavaScript", "React", "Redux"],
+    age: 30,
+    isLoggedIn: true,
+    points: 50,
+  },
+  Daniel: {
+    email: "daniel@alex.com",
+    skills: ["HTML", "CSS", "JavaScript", "Python"],
+    age: 20,
+    isLoggedIn: false,
+    points: 40,
+  },
+  John: {
+    email: "john@john.com",
+    skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "Node.js"],
+    age: 20,
+    isLoggedIn: true,
+    points: 50,
+  },
+  Thomas: {
+    email: "thomas@thomas.com",
+    skills: ["HTML", "CSS", "JavaScript", "React"],
+    age: 20,
+    isLoggedIn: false,
+    points: 40,
+  },
+  Paul: {
+    email: "paul@paul.com",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "MongoDB",
+      "Express",
+      "React",
+      "Node",
+    ],
+    age: 20,
+    isLoggedIn: false,
+    points: 40,
+  },
+  whoIsLoggedIn: function () {
+    let logged = 0;
+    for (const key in users) {
+      if (users[key].isLoggedIn == true) {
+        logged++;
+      }
+    }
+    return logged;
+  },
+  countPoints: function () {
+    let count = 0;
+    for (const key in users) {
+      if (users[key].points >= 50) {
+        count++;
+      }
+    }
+    return count;
+  },
+};
+console.log(users.whoIsLoggedIn());
+console.log(users.countPoints());
+const users = {
+  Alex: {
+    email: "alex@alex.com",
+    skills: ["HTML", "CSS", "JavaScript"],
+    age: 20,
+    isLoggedIn: false,
+    points: 30,
+  },
+  Asab: {
+    email: "asab@asab.com",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Redux",
+      "MongoDB",
+      "Express",
+      "React",
+      "Node",
+    ],
+    age: 25,
+    isLoggedIn: false,
+    points: 50,
+  },
+  Brook: {
+    email: "daniel@daniel.com",
+    skills: ["HTML", "CSS", "JavaScript", "React", "Redux"],
+    age: 30,
+    isLoggedIn: true,
+    points: 50,
+  },
+  Daniel: {
+    email: "daniel@alex.com",
+    skills: ["HTML", "CSS", "JavaScript", "Python"],
+    age: 20,
+    isLoggedIn: false,
+    points: 40,
+  },
+  John: {
+    email: "john@john.com",
+    skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "Node.js"],
+    age: 20,
+    isLoggedIn: true,
+    points: 50,
+  },
+  Thomas: {
+    email: "thomas@thomas.com",
+    skills: ["HTML", "CSS", "JavaScript", "React"],
+    age: 20,
+    isLoggedIn: false,
+    points: 40,
+  },
+  Paul: {
+    email: "paul@paul.com",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "MongoDB",
+      "Express",
+      "React",
+      "Node",
+    ],
+    age: 20,
+    isLoggedIn: false,
+    points: 40,
+  },
+  theStack: function () {
+    let userstack = {};
+    for (const keys in users) {
+      if (
+        users[keys].skills === "MongoDB" &&
+        users[keys].skills === "Express" &&
+        users[keys].skills === "React" &&
+        users[keys].skills === "Node"
+        ) {
+          userstack[keys] = users[keys];
+        }
+      }
+      return userstack;
+    },
+  };
+  
+  console.log(users.theStack());
+  
+  */
+
+  //Day 09
